@@ -1,0 +1,40 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1.hero-title {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 37px;
+  text-align: center;
+  color: #293264;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #293264;
+  margin-bottom: 3em;
+}
+
+.startBtn {
+  background-color: #4d5b9e;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  padding: 1em 4em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Inter";
+  cursor: pointer;
+  color: #f5f7fb;
+  transition: border-color 0.25s;
+}
