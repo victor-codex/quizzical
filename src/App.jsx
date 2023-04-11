@@ -16,6 +16,7 @@ function App() {
   //Getting Data
   useEffect(() => {
     async function getQuiz() {
+      setIsLoading(true)
       const res = await fetch(
         "https://opentdb.com/api.php?amount=5&encode=base64"
       )
@@ -35,6 +36,7 @@ function App() {
         })
       })
       setQuizData(quiz)
+      setIsLoading(false)
     }
     getQuiz()
   }, [count])
@@ -83,23 +85,12 @@ function App() {
       })
       setCheck(true)
     }
-
-    // if (check) {
-    //   setCheck(false)
-    //   setIsLoading(true)
-    //   setScore(0)
-    //   setCount((count) => count + 1)
-    // }
   }
 
   function handleReset() {
     if (check) {
-      setIsLoading(true)
       setScore(0)
       setCount((count) => count + 1)
-      setTimeout(() => {
-        setIsLoading(false)
-      }, 2000)
       setCheck(false)
     }
   }
